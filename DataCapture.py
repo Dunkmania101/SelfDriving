@@ -5,7 +5,6 @@ import os
 #import uuid # Should this be here?
 
 
-current_PWM = ""
 
 def create_serial(port = "COM3", rateithink = 9600, timeout = 1):
     return serial.Serial(port, rateithink, timeout=timeout)
@@ -82,5 +81,5 @@ if __name__ == '__main__':
         main()
     except KeyboardInterrupt as e:
         print(e)
-        exit(0)
+        exit()
 
