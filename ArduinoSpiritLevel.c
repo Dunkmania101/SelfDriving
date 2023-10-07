@@ -28,13 +28,13 @@ void loop() {
     IMU.readAcceleration(x, y, z);
     
     // subtract the last reading:
-    total = total - readings[readIndex];
+    total -= readings[readIndex];
     // read from the sensor:
     readings[readIndex] = x;
     // add the reading to the total:
-    total = total + readings[readIndex];
+    total += readings[readIndex];
     // advance to the next position in the array:
-    readIndex = readIndex + 1;
+    readIndex += 1;
 
     // if we're at the end of the array...
     if (readIndex >= numReadings) {
@@ -51,3 +51,4 @@ void loop() {
 
   delay(4);
 }
+
